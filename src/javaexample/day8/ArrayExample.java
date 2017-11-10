@@ -16,6 +16,9 @@ package javaexample.day8;
 // Employee e[] = new Employee[20] --> 0 to 20 inclusive
 // e[i] such that i = 0 to 19;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ArrayExample {
 
     public  static void main(final String ... args){
@@ -41,6 +44,5 @@ public class ArrayExample {
         for(int i = 0; i<3;i++){
             System.out.println(s[i]);
         }
-
     }
 }
