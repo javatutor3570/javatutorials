@@ -18,6 +18,9 @@ public class EmployeeTest {
         }catch (BadDataException ex){
             ex.printStackTrace();
             System.out.println("program exited gracefully");
+        }catch (NullPointerException ex){
+            ex.printStackTrace();
+            System.out.println("null pointer exited gracefully");
         }
     }
 
@@ -25,7 +28,7 @@ public class EmployeeTest {
     public static void validateEmployees(List<Employee> employees){
 
         for(Employee e : employees){
-            if(e!=null && PhoneType.BUSINESS.equals(e.getType()) && e.getCompanyName()==null){
+            if( PhoneType.BUSINESS.equals(e.getType()) && e.getCompanyName()==null){
                 throw new BadDataException(e.toString() + ":phone type with business should have company name");
             }
         }
